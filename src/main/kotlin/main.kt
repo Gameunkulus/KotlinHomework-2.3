@@ -3,7 +3,7 @@ import Post.*
 fun main() {
 
     val post1: Post = Post(
-        id = 100001,
+        0,
         ownerId = 100001,
         fromId = 100002,
         createdBy = 100042,
@@ -11,11 +11,11 @@ fun main() {
         text = "Wazzuuup",
         replyOwnerId = 100002,
         replyPostId = 100002,
-        comments = Comments(101, true, true, true, true),
-        copyright = Copyright(100005, "link1", "name1", "type1"),
+        comments = null,
+        copyright = null,
         likes = Likes(10000, true, true, true),
         reposts = Reposts(101, true),
-        views = Views(88),
+        views = null,
         postType = "post",
         signerId = 100088,
         canPin = true,
@@ -35,7 +35,7 @@ fun main() {
     )
 
     val post2: Post = Post(
-        id = 100001,
+        1,
         ownerId = 100002,
         fromId = 100003,
         createdBy = 100086,
@@ -47,7 +47,7 @@ fun main() {
         copyright = Copyright(100005, "link2", "name2", "type2"),
         likes = Likes(10001, true, true, true),
         reposts = Reposts(101, true),
-        views = null,
+        views = Views(88),
         postType = "post",
         signerId = 100088,
         canPin = true,

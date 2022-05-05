@@ -3,17 +3,13 @@ import org.hamcrest.core.AnyOf
 
 object WallService {
     private var posts = emptyArray<Post>()
-    private var checkId: Post? = null
+    private var checkId: Int = 0
 
     fun add(post: Post): Post {
-        posts += post
+        checkId++
+        val newPost = post.copy(id = checkId)
+        posts += newPost
         return posts.last()
-    }
-
-    fun getValue(post: Post): Any{
-        post.let {
-            return field  }
-
     }
 
     fun likeById(id: Int) {
